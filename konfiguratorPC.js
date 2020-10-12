@@ -42,7 +42,50 @@ const cpu = [
         price: 450
     },
 ]
-
+const psu = [
+    {
+        id: 1,
+        name: "be quiet! System Power 9 600W 80 Plus Bronze",
+        price: 289
+    },
+    {
+        id: 2,
+        name: "ASUS ROG Strix 750W 80 Plus Gold",
+        price: 750
+    },
+    {
+        id: 3,
+        name: "SilentiumPC Supremo L2 650W 80 Plus Gold",
+        price: 359
+    },
+    {
+        id: 4,
+        name: "Corsair TX 750W 80 Plus Gold",
+        price: 499
+    },
+]
+const mobo = [
+    {
+        id: 1,
+        name: "MSI MPG B550 GAMING PLUS",
+        price: 679
+    },
+    {
+        id: 2,
+        name: "Gigabyte B450 AORUS ELITE",
+        price: 399
+    },
+    {
+        id: 3,
+        name: "Gigabyte B360 AORUS GAMING 3 WIFI",
+        price: 529
+    },
+    {
+        id: 4,
+        name: "MSI MAG Z390 TOMAHAWK",
+        price: 719
+    },
+]
 let summaryCompHandler = document.getElementById('summaryComp');
 /*
 document.write("1-sza karta graficzna:"+gfx[0]+"<br>")
@@ -58,9 +101,7 @@ document.write("3-cia karta graficzna:"+gfx[2]+"<br>")
 document.write("4-ta karta graficzna:"+gfx[3]+"<br>")*/
 
 
-for(let i=0; i<4; i++){
-    document.write(gfx[i].name+" "+gfx[i].price+"zł<br>")
-}
+
 function addOpt(elem, optValue, textOpt) {
     let select1 = document.getElementById(elem);
     option = document.createElement("option");
@@ -76,7 +117,12 @@ for(let i=0; i<4; i++){
 for(let i=0; i<4; i++){
     addOpt("cpu", cpu[i].id, cpu[i].name)
 }
-
+for(let i=0; i<4; i++){
+    addOpt("psu", psu[i].id, psu[i].name)
+}
+for(let i=0; i<4; i++){
+    addOpt("mobo", mobo[i].id, mobo[i].name)
+}
 
 
 
